@@ -21,7 +21,6 @@ class _DashboardViewState extends State<DashboardView> {
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
-
     return Scaffold(
       key: scaffoldKey,
         appBar: MediaQuery.of(context).size.width < SizeConfig.tablet
