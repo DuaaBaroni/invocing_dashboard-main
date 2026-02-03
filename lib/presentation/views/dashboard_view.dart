@@ -15,29 +15,28 @@ class DashboardView extends StatefulWidget {
 }
 
 class _DashboardViewState extends State<DashboardView> {
-
-
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     SizeConfig.init(context);
     return Scaffold(
-      key: scaffoldKey,
+        key: scaffoldKey,
         appBar: MediaQuery.of(context).size.width < SizeConfig.tablet
             ? AppBar(
                 leading: IconButton(
                     onPressed: () {
-                       scaffoldKey.currentState?.openDrawer();
-                   },
+                      scaffoldKey.currentState?.openDrawer();
+                    },
                     icon: Icon(Icons.menu, color: AppColors.primary)),
               )
             : null,
-            drawer: MediaQuery.of(context).size.width < SizeConfig.tablet ? const CustomDrawer() : null,
+        drawer: MediaQuery.of(context).size.width < SizeConfig.tablet
+            ? const CustomDrawer()
+            : null,
         body: AdaptiveLayout(
           mobileLayout: (context) => const DashboardMobileLayout(),
           tabletLayout: (context) => const DashboardTabletLayout(),
           desktopLayout: (context) => const DesktopDashboardLayout(),
-        )
-      );
-  }
-}
+        ));
+   }
+ }
