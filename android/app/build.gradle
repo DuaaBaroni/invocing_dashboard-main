@@ -8,7 +8,7 @@ plugins {
 android {
     compileSdkVersion 34
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion flutter.minSdkVersion
         targetSdkVersion 34
     }
 }
