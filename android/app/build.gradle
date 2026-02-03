@@ -1,17 +1,16 @@
-android {
-    compileSdkVersion 34  // or 33
-    
-    defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 34
-    }
-}
-
 plugins {
     id "com.android.application"
     id "kotlin-android"
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    compileSdkVersion 34
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 34
+    }
 }
 
 def localProperties = new Properties()
